@@ -56,6 +56,7 @@ class GuitarTest {
 		assertEquals(1, guitar.getTone());
 		assertEquals(7, guitar.getIntonation());
 		assertEquals(5, guitar.getProjection());
+		assertEquals("Nylon", guitar.getString());
 		
 	}
 

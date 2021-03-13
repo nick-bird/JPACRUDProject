@@ -26,12 +26,6 @@ public class Guitar {
 	
 	private String style;
 	
-	@Column(name = "last_updated")
-	private LocalDateTime updatedAt;
-	
-	@Column (name = "created_at")
-	private LocalDateTime createdAt;
-	
 	@Column(name = "play_notes")
 	private String notes;
 	
@@ -79,22 +73,6 @@ public class Guitar {
 
 	public void setStyle(String style) {
 		this.style = style;
-	}
-
-	public LocalDateTime getUpdatedAt() {
-		return updatedAt;
-	}
-
-	public void setUpdatedAt(LocalDateTime updatedAt) {
-		this.updatedAt = updatedAt;
-	}
-
-	public LocalDateTime getCreatedAt() {
-		return createdAt;
-	}
-
-	public void setCreatedAt(LocalDateTime createdAt) {
-		this.createdAt = createdAt;
 	}
 
 	public String getNotes() {
@@ -155,12 +133,13 @@ public class Guitar {
 
 	
 
+	
+
 	@Override
 	public String toString() {
 		return "Guitar [id=" + id + ", manufacturer=" + manufacturer + ", price=" + price + ", model=" + model
-				+ ", store=" + store + ", style=" + style + ", updatedAt=" + updatedAt + ", createdAt=" + createdAt
-				+ ", notes=" + notes + ", tone=" + tone + ", intonation=" + intonation + ", projection=" + projection
-				+ ", string=" + string + "]";
+				+ ", store=" + store + ", style=" + style + ", notes=" + notes + ", tone=" + tone + ", intonation="
+				+ intonation + ", projection=" + projection + ", string=" + string + "]";
 	}
 
 	public Guitar() {
