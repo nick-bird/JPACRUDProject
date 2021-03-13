@@ -48,6 +48,15 @@ class GuitarTest {
 	void test() {
 		assertNotNull(guitar);
 		assertEquals("Yamahah", guitar.getManufacturer());
+		assertEquals(1000.45, guitar.getPrice());
+		assertEquals("aaa", guitar.getModel());
+		assertEquals("gc", guitar.getStore());
+		assertEquals("Classical", guitar.getStyle());
+		assertEquals("some text here", guitar.getNotes());
+		assertEquals(1, guitar.getTone());
+		assertEquals(7, guitar.getIntonation());
+		assertEquals(5, guitar.getProjection());
+		
 	}
 
 }
