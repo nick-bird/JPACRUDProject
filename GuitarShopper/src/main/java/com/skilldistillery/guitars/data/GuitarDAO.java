@@ -11,7 +11,7 @@ public interface GuitarDAO {
 	
 	Guitar addGuitar(Guitar guitar);
 	
-	Guitar updateGuitar(int id);
+	Guitar updateGuitar(int id, Guitar ug);
 	
 	boolean deleteGuitar(int id);
 }
