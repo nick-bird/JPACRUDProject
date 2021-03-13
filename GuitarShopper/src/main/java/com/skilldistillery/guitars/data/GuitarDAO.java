@@ -9,4 +9,9 @@ public interface GuitarDAO {
 	Guitar findById(int id);
 	List<Guitar> findAll();
 	
+	Guitar addGuitar(Guitar guitar);
+	
+	Guitar updateGuitar(int id);
+	
+	boolean deleteGuitar(int id);
 }

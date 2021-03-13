@@ -28,4 +28,22 @@ public class GuitarDaoJpaImpl implements GuitarDAO {
 		return em.createQuery(jdql, Guitar.class).getResultList();
 	}
 
+	@Override
+	public Guitar addGuitar(Guitar guitar) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Guitar updateGuitar(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean deleteGuitar(int id) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
 }
