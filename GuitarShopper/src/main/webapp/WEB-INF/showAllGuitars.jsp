@@ -38,7 +38,7 @@
 			<c:if test="${guitar.store != null}">
 			<tr>
 				<td>Store:</td>
-				<td>${guitar.rating}</td>
+				<td>${guitar.store}</td>
 			</tr></c:if>
 			<c:if test="${guitar.string != null}">
 			<tr>
@@ -72,18 +72,18 @@
 			</tr> </c:if>
 		
 		</table>
-		<form action="updateguitar.do" method="GET">
-			<button type="submit" name="id" value="${guitar.id}"> Update Guitar Record Details</button>
+		<form action="updateform.do" method="GET">
+			<button type="submit" name="id" value="${guitar.id}"> Update Record </button>
 		</form>
 		
-		<form action="deleteGuitarResult.do" method="POST">
-			<button type="submit" name="id" value="${guitar.id}">Delete Guitar Record</button>
+		<form action="deleteguitar.do" method="POST">
+			<button type="submit" name="id" value="${guitar.id}">Delete Record</button>
 		</form>
 		</c:if>
 		</c:forEach>
 		<br>
   			<br>
-				<a href="returntomain.do" class="btn btn-default"> Return to Home Page </a>
+				<a href="home.do" class="btn btn-default"> Return to Home Page </a>
   	  		<br>
 		</div>
 

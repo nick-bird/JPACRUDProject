@@ -45,7 +45,6 @@ public class GuitarDaoJpaImpl implements GuitarDAO {
 	public Guitar updateGuitar(int id, Guitar ug) {
 		// ug - Upgraded guitar object
 		// mg - Managed guitar object
-		
 		Guitar mg = em.find(Guitar.class, id);
 	
 		if (ug != null) {

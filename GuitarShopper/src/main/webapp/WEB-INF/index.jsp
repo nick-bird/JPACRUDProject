@@ -14,6 +14,7 @@ ${test }
 
 
 <a href = "addguitarform.do">  <h3> Add a guitar </h3>   </a>
+<a href = "showguitars.do">  <h3> View all records </h3>   </a>
 
 
 </body>

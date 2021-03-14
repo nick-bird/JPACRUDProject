@@ -46,7 +46,15 @@ public class GuitarController {
 	public String updateGuitar(int id, Guitar guitar, Model model) {
 		Guitar updatedGuitar = dao.updateGuitar(id, guitar);
 		model.addAttribute("guitar", updatedGuitar);
-		return "updateResult";
+		return "updateGuitarResult";
+	}
+	
+	@RequestMapping(path = "updateform.do")
+	public String updateForm(int id, Model model) {
+		Guitar guitarToUpdate = dao.findById(id);
+		model.addAttribute("guitar", guitarToUpdate);
+		
+		return "updateGuitar";
 	}
 	
 	@RequestMapping(path = "showguitars.do")
