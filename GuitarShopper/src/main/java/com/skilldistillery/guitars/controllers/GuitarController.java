@@ -1,5 +1,7 @@
 package com.skilldistillery.guitars.controllers;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -45,6 +47,14 @@ public class GuitarController {
 		Guitar updatedGuitar = dao.updateGuitar(id, guitar);
 		model.addAttribute("guitar", updatedGuitar);
 		return "updateResult";
+	}
+	
+	@RequestMapping(path = "showguitars.do")
+	public String showGuitars(Model model) {
+		List<Guitar> guitars = dao.findAll();
+		model.addAttribute("guitars", guitars);
+		
+		return "showAllGuitars";
 	}
 
 }
