@@ -7,16 +7,19 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<title>Update Guitar</title>
 </head>
 <body>
 <c:if test="${guitar == null}">Update was not sucessful.</c:if>
 			<c:if test="${guitar != null}">
+	<h2>Update Successful</h2>
+	<br>
 	<table>
-		<tr>
-			<td>ID:</td>
-			<td>${guitar.id}</td>
-		</tr>
+		
 		<c:if test="${guitar.manufacturer != null}">
 			<tr>
 				<td>Manufacturer:</td>
@@ -56,7 +59,7 @@
 		</c:if>
 		<c:if test="${guitar.notes != null}">
 			<tr>
-				<td>Style:</td>
+				<td>Notes from playing:</td>
 				<td>
 					<p>${guitar.notes}</p>
 				</td>
@@ -82,6 +85,7 @@
 		</c:if>
 
 	</table>
+	<br>
 
 	<form action="deleteguitar.do" method="POST">
 		<button type="submit" name="id" value="${guitar.id}">Delete
