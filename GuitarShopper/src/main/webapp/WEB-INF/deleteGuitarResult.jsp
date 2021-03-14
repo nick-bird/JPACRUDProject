@@ -11,5 +11,12 @@
 </head>
 <body>
 
+<c:if test="${isDeleted == true }">Record deleted. </c:if>
+<c:if test="${isDeleted == false }">Record could not be deleted. </c:if>
+
+<br>
+	<a href="home.do" class="btn btn-default"> Return to Home Page </a>
+	<br>
+
 </body>
 </html>

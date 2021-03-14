@@ -37,10 +37,12 @@ public class GuitarController {
 	}
 	
 	@RequestMapping(path = "deleteguitar.do")
-	public String deleteGuitar(int id) {
+	public String deleteGuitar(int id, Model model) {
 		boolean isDeleted = dao.deleteGuitar(id);
-		return "deleteResult";
+		model.addAttribute("isDeleted", isDeleted);
+		return "deleteGuitarResult";
 	}
+	
 	
 	@RequestMapping(path = "updateguitar.do")
 	public String updateGuitar(int id, Guitar guitar, Model model) {
