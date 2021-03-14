@@ -13,7 +13,7 @@
 ${test }
 
 
-<h1>Create guitar</h1>
+<a href = "addguitarform.do">  <h3> Add a guitar </h3>   </a>
 
 
 </body>

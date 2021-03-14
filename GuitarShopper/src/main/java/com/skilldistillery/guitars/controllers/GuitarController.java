@@ -21,6 +21,12 @@ public class GuitarController {
 		return "index";
 	}
 	
+	@RequestMapping(path="addguitarform.do")
+	public String addGuitarForm(Guitar guitar, Model model) {
+		model.addAttribute("guitar", guitar);
+		return "addGuitarForm";
+	}
+	
 	@RequestMapping(path = "addguitar.do")
 	public String addGuitar(Guitar guitar, Model model) {
 		guitar = dao.addGuitar(guitar);
