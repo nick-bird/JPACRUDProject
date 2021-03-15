@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `guitar` (
 ENGINE = InnoDB;
 
 SET SQL_MODE = '';
-DROP USER IF EXISTS guitaruser@localhost;
+-- DROP USER guitaruser@localhost;
 SET SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 CREATE USER 'guitaruser'@'localhost' IDENTIFIED BY 'guitaruser';
 
@@ -57,4 +57,3 @@ INSERT INTO `guitar` (`id`, `manufacturer`, `price`, `model`, `store_name`, `sty
 INSERT INTO `guitar` (`id`, `manufacturer`, `price`, `model`, `store_name`, `style`, `play_notes`, `tone_rating`, `intonation_rating`, `projection_rating`, `string_type`) VALUES (4, 'Taylor', 500, 'CG102', 'ww', 'Accoustic', 'some text here', 6, 3, 2, 'Steel');
 
 COMMIT;
-
